@@ -51,6 +51,8 @@ while sair==False:
         print(f"Número sorteado {y}")
         print("Você perdeu")
 
-    teste = input("Pressione 's' para sair ou ENTER para jogar novamente  ")
+    teste = input("Pressione 's' para sair ou ENTER para jogar novamente  ").lower().strip()
     if teste == "s":
         sair = True
+
+

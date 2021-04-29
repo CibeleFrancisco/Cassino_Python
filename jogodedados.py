@@ -16,7 +16,7 @@ while sair==False:
     else:
         print("Resultado impar, parabéns, você venceu!")
             
-    teste = input("Pressione 's' para sair ou ENTER para jogar novamente  ")
+    teste = input("Pressione 's' para sair ou ENTER para jogar novamente  ").lower().strip()
     if teste == "s":
         sair = True
 
