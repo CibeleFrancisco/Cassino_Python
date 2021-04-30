@@ -1,23 +1,26 @@
 import random
+from time import sleep
+out= False
+while out==False:
 
-sair= False
-while sair==False:
-
-    print("Jogo da SORTE! teste sua sorte")
-    print("Tente advinhar o número entre 1 e 100")
-    print("Se acertar o número ganhe 100% do prêmio")
-    print("Se acertar a dezena correspondente ganhe 20% do prêmio")
-    print("Se acertar 2 números anteriores ou posteriores ganhe 25% do prêmio")
-    repetir= False
-    while repetir== False:
+    print("\U0001F340"*20)
+    print("\U0001F340 \033[7:0:42mGAME OF CHANGE!\033[m \U0001F340 \n \033[1:32:40m TRY YOUR LUCKY! \033[m")
+    print("\U0001F340" * 20)
+    print("Try to guess one number between 1 and 100 \n"
+          "If you hit the number earn 100% of the prize\n"
+          "If you hit the corresponding ten, win 20% of the prize\n"
+          "If you hit 2 numbers before or after you win 25% of the prize")
+    repeate= False
+    while repeate== False:
         
-        x= int(input("Digite um número entre 1 e 100: "))
-               
+        x= int(input("Enter a number between 1 and 100: "))
+        print("PROCESSING.........")
+        sleep(2)
         if x not in range (1,100):
-            print("número inválido!")
-            repetir=False
+            print("\033[1:31:40m INVALID NUMBER!\033[m")
+            repeate=False
         else:
-            repetir = True
+            repeate = True
             
     y= random.randint(1,100)
 
@@ -25,34 +28,34 @@ while sair==False:
     decimaly= y//10%100
 
     if decimalx==decimaly:
-      print(f"Número sorteado {y}")
-      print("PARABÉNS, VOCÊ GANHOU 20% DO PRÊMIO")
+      print(f"Chosen number:  {y}")
+      print("\U0001F340 \33[7:32:40mCONGRATULATIONS, YOU WON 20% OF THE PRIZE \33[m\U0001F340")
 
     elif x-1 ==y:
-        print(f"Número sorteado {y}")
-        print("PARABÉNS, VOCÊ GANHOU 25% DO PRÊMIO")
+        print(f"Chosen number:  {y}")
+        print("\U0001F340 \33[7:32:40mCONGRATULATIONS, YOU WON 25% OF THE PRIZE \33[m\U0001F340")
 
     elif x-2 ==y:
-        print(f"Número sorteado {y}")
-        print("PARABÉNS, VOCÊ GANHOU 25% DO PRÊMIO")
+        print(f"Chosen number:  {y}")
+        print("\U0001F340 \33[7:32:40mCONGRATULATIONS, YOU WON 25% OF THE PRIZE \33[m\U0001F340")
 
     elif x+1 ==y:
-        print(f"Número sorteado {y}")
-        print("PARABÉNS, VOCÊ GANHOU 25% DO PRÊMIO")
+        print(f"Chosen number:  {y}")
+        print("\U0001F340 \33[7:32:40mCONGRATULATIONS, YOU WON 25% OF THE PRIZE \33[m\U0001F340")
 
     elif x+2 ==y:
-        print(f"Número sorteado {y}")
-        print("PARABÉNS, VOCÊ GANHOU 25% DO PRÊMIO")
+        print(f"Chosen number:  {y}")
+        print("\U0001F340 \33[7:32:40mCONGRATULATIONS, YOU WON 25% OF THE PRIZE \33[m\U0001F340")
 
     elif x ==y:
-        print(f"número sorteado {y}. PARABÉNS, VOCÊ VENCEU!")
-
+        print(f"Chosen number:  {y}")
+        print("\U0001F340 \U0001F340 \33[7:32:40mCONGRATULATIONS, YOU WON 100% OF THE PRIZE \33[m\U0001F340 \U0001F340")
     else:
-        print(f"Número sorteado {y}")
-        print("Você perdeu")
+        print(f"Chosen number:  {y}")
+        print("You Lose \U0001F97A")
 
-    teste = input("Pressione 's' para sair ou ENTER para jogar novamente  ").lower().strip()
-    if teste == "s":
-        sair = True
+    test = input("Type 'yes' to quit or ENTER to play again:  ").lower().strip()
+    if test == "yes":
+        out = True
 
 
