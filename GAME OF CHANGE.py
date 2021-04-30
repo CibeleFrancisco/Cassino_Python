@@ -4,23 +4,23 @@ out= False
 while out==False:
 
     print("\U0001F340"*20)
-    print("\U0001F340 \033[7:0:42mGAME OF CHANGE!\033[m \U0001F340 \n \033[1:32:40m TRY YOUR LUCKY! \033[m")
+    print("\U0001F340 \033[7:0:42mGAME OF CHANGE!\033[m \U0001F340 \n \033[1:32:40m TRY YOUR LUCK! \033[m")
     print("\U0001F340" * 20)
-    print("Try to guess one number between 1 and 100 \n"
-          "If you hit the number earn 100% of the prize\n"
+    print("Try to guess a number between 1 and 100 \n"
+          "If you hit the number, earn 100% of the prize\n"
           "If you hit the corresponding ten, win 20% of the prize\n"
-          "If you hit 2 numbers before or after you win 25% of the prize")
-    repeate= False
-    while repeate== False:
+          "If you hit 2 numbers before or after, you win 25% of the prize")
+    repeat= False
+    while repeat== False:
         
         x= int(input("Enter a number between 1 and 100: "))
         print("PROCESSING.........")
         sleep(2)
         if x not in range (1,100):
             print("\033[1:31:40m INVALID NUMBER!\033[m")
-            repeate=False
+            repeat=False
         else:
-            repeate = True
+            repeat = True
             
     y= random.randint(1,100)
 
